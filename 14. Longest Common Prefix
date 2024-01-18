@@ -1,0 +1,25 @@
+https://leetcode.com/problems/longest-common-prefix/description/
+
+
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        // 1.sort the array
+        Arrays.sort(strs);
+         //after sort ["flight","flow","flower"]
+
+        // 2. Take 2 string one is first string and 2nd one indicate last string
+        String str1 = strs[0]; // indicate flight
+        String str2 = strs[strs.length - 1]; // indicate flower
+        
+        //3.loop and check equal or not at the time not equal break
+        int index = 0; 
+        while(index < str1.length() && index < str2.length())
+        {
+            if(str1.charAt(index) == str2.charAt(index)) index ++;
+
+            else
+                break;
+        }
+        return str1.substring(0, index);
+    }
+}
