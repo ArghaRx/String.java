@@ -26,7 +26,7 @@ class Solution {
 
        if(ans.length() !=0 && ans.charAt(0) == ' ')  //trim krle hba na..jodi ans size 0 na hoi and ans er first val ' ' take tkn oi space chara baki subsrting ta 
                                                          select korbo
-       ans = ans.substring(1);
+        ans = ans.substring(1, ans.length());
  
        return ans;
     }
